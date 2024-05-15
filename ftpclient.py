@@ -44,11 +44,10 @@ def file_retriving():
         filename =input("Please input the file name you want to retrieve")
         client.send(filename.encode())
         data=client.recv(1024).decode()
-        print(data)
         filename = input("Please input the name with which you want to store it in your device: ")
         file = open(filename, 'w')
         # while(data):           
-        #     file.write(str(data))
+        file.write(str(data))
     except:
         print("Given file is not present on server")
 def list1():
